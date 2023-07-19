@@ -63,9 +63,8 @@ export const App = () => {
   const onCloseModal = () => setModal({ isOpen: false, modalData: null });
 
   const checkLoadMore = () => {
-    const LoadMoreHidden = Boolean(totalHits / POSTS_PER_PAGE < page);
-    console.log(LoadMoreHidden);
-    return LoadMoreHidden;
+    const loadMoreHidden = Boolean(totalHits / POSTS_PER_PAGE < page);
+    return loadMoreHidden;
   };
 
   const showLoader = isLoading;
