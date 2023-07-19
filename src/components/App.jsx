@@ -63,15 +63,19 @@ export const App = () => {
   const onCloseModal = () => setModal({ isOpen: false, modalData: null });
 
   const checkLoadMore = () => {
-    const LoadMoreHidden = Boolean(
-      totalHits / POSTS_PER_PAGE < page && totalHits
-    );
+    const LoadMoreHidden = Boolean(totalHits / POSTS_PER_PAGE < page);
+    console.log(LoadMoreHidden);
     return LoadMoreHidden;
   };
 
   const showLoader = isLoading;
   const showError = error;
-  const showButton = !checkLoadMore() && page >= 1 && !showLoader && !showError;
+  const showButton =
+    totalHits !== null &&
+    !checkLoadMore() &&
+    page >= 1 &&
+    !showLoader &&
+    !showError;
   return (
     <div className="App">
       <Searchbar onSelectCategory={onSelectCategory} />
