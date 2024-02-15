@@ -10,4 +10,8 @@ export const StyledImageGallery = styled.ul`
   list-style: none;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+  }
 `;

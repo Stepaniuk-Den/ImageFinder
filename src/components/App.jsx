@@ -86,7 +86,7 @@ export const App = () => {
       {galleryList?.length > 0 && (
         <ImageGallery dataList={galleryList} onOpenModal={onOpenModal} />
       )}
-      {showLoader && <Loader />}{' '}
+      {showLoader && <Loader />}
       {showButton && <Button onLoadMore={onLoadMore} />}
       {modal.isOpen && (
         <Modal onCloseModal={onCloseModal} modalData={modal.modalData} />
